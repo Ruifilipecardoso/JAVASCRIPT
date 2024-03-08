@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <style>
+        body {
+            background-color: rgb(105, 105, 105);
+            color: white;
+            font: normal 20pt Arial;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <script>
+        var n1 = Number.parseInt(window.prompt('Escreva um número inteiro:')/* String */) // Number
+        var n2 = Number.parseFloat(window.prompt('Agora, escreva um número real:')/* String */) // Number
+        var n3 = Number(window.prompt('Agora, só escreva um número:'))
+        window.alert('Obrigado!')
+        var s = n1 + n2 + n3
+        /*window.alert('A soma desses dois números é ' + s + ' !')*/
+        // (string + string/number) Concatenação
+        // (number + number) Adição
+        window.alert(`A soma entre ${n1}, ${n2} e ${n3} é ${s} ! `)
+    </script>
+</body>
+</html>
