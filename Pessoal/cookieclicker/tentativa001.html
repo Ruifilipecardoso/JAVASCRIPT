@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookieClicker</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body,html {
+            background-color: white;
+            font-size: 1.7em;
+        }
+
+        h1 {
+            font-size: 1em;
+        }
+
+        #bolacha {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -90%);
+            background-color: rgb(220, 220, 16);
+            min-width: 240px;
+            min-height: 240px;
+            width: 250px;
+            height: 250px;
+            max-width: 260px;
+            max-height: 260px;
+            margin: auto;
+            cursor: pointer;
+            text-align: center;
+            line-height: 250px;
+            border-radius: 100%;
+            box-shadow: inset 0px 0px 20px 20px rgba(143, 100, 15, 0.233);
+            user-select: none;
+        }
+
+        /*#bolacha > p {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            margin: none;
+        }*/
+    </style>
+</head>
+<body>
+    <div id="bolacha">
+        0
+    </div>
+    
+    <script>
+        var bolacha = window.document.getElementById('bolacha')
+
+        /*var txt_pontos = window.document.getElementById('bolacha').getElementsByTagName('p')[0]*/
+
+        var pontuaçao = 0
+
+        bolacha.addEventListener('click', clicar)
+        bolacha.addEventListener('mouseenter', entrar)
+        bolacha.addEventListener('mouseout', sair)
+        bolacha.addEventListener('mousedown', pressionar)
+        bolacha.addEventListener('mouseup', soltar)
+        
+        function clicar(){
+            bolacha.innerHTML = ++pontuaçao
+        }
+
+        function entrar(){
+            bolacha.style.width = '260px'
+            //bolacha.style.maxWidth = '500px'
+            bolacha.style.height = '260px'
+            //bolacha.style.maxHeight = '500px'
+            bolacha.style.paddingTop = '5px 0px 0px 0px'
+        }
+
+        function sair(){
+            bolacha.style.width = '250px'
+            //bolacha.style.maxWidth = '400px'
+            bolacha.style.height = '250px'
+            //bolacha.style.maxHeight = '400px'
+            bolacha.style.paddingTop = '0px 0px 0px 0px'
+        }
+
+        function pressionar(){
+            bolacha.style.width = '240px'
+            bolacha.style.height = '240px'
+            bolacha.style.padding = '0px 0px 5px 0px'
+        }
+
+        function soltar(){
+            entrar()
+        }
+
+    </script>
+</body>
+</html>
