@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Português</title>
+</head>
+<body>
+    <h1>És Português?</h1>
+    <label for="txtpaís">País de Nascimento:</label>
+    <input type="text" name="txtpaís" id="txtpaís">
+    <input type="submit" value="OK" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar() {
+            var txtpaís = window.document.getElementById('txtpaís')
+            var res = window.document.getElementById('res')
+            var país = txtpaís.value
+            if (país == 'Portugal' || país == 'portugal'){ 
+                res.innerHTML = '<p>Nasceste em Portugal, logo és Português</p>'
+            } else {
+                res.innerHTML = `<p>Nasceste em ${país}, logo és Estrangeiro</p>`
+            }
+        }
+    </script>
+</body>
+</html>

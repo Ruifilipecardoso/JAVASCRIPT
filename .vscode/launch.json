@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        
+        {
+            "type": "node",
+            "name": "Executar Arquivo Atual",
+            "request": "launch",
+            "program": "${workspaceFolder}\\Exercícios\\aula011\\ex009.js"
+        }
+    ]
+}
