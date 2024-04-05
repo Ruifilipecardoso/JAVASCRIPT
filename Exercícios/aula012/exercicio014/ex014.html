@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Dia</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body id="fundo">
+    <main >
+        <h1>Hora do Dia</h1>
+        <section id="secçao">
+            <div id="horas">...</div>
+            <div id="imagem"></div>
+        </section>
+        <p>@CursoemVideo</p>
+    </main>
+    <script>
+        var agora = new Date()
+        var hora = agora.getHours()
+        var fundo = window.document.getElementById('fundo')
+        var secçao = window.document.getElementById('secçao')
+        var imagem = window.document.getElementById('imagem')
+        var horas = window.document.getElementById('horas')
+        
+        if(hora >= 0 && hora <= 24){
+            horas.innerHTML = `Agora são ${hora} horas!`
+        }else{
+            horas.innerHTML = '%{[ERROR]}%{[ERROR]}%'
+            window.alert(`Não existe ${hora} horas`)
+        }
+
+        if (hora >= 7 && hora < 18){
+            fundo.style.backgroundImage = 'linear-gradient(0deg, rgb(16, 145, 205) 78%, rgb(100, 200, 250))'
+            secçao.style.backgroundColor = 'white'
+            imagem.style.backgroundImage = 'linear-gradiant(0deg, rgb(16, 145, 205) 78%, rgb(100, 200, 250)'
+        }else if (hora >= 0 && hora < 7){
+            fundo.style.backgroundImage = 'linear-gradient(0deg, rgb(7, 5, 70) 78%, rgb(14, 10, 127))'
+            secçao.style.backgroundColor = 'rgb(66, 64, 148)'
+            secçao.style.color = 'white'
+            imagem.style.background = 'rgb(7, 5, 70)'
+        }else if (hora >= 18 && hora < 20){
+            fundo.style.backgroundImage = 'linear-gradient(180deg, rgb(255, 166, 0) 70%, rgb(255, 51, 0))'
+            secçao.style.backgroundColor = 'rgb(200, 50, 0)'
+            secçao.style.color = 'white'
+            imagem.style.backgroundColor = 'rgb(255, 166, 0)'
+        }else if (hora >= 20 && hora <= 24){
+            fundo.style.backgroundImage = 'linear-gradient(0deg, rgb(7, 5, 70) 78%, rgb(14, 10, 127))'
+            secçao.style.backgroundColor = 'rgb(66, 64, 148)'
+            secçao.style.color = 'white'
+            imagem.style.background = 'rgb(7, 5, 70)'
+        }else{
+            fundo.style.backgroundColor = 'red'
+            secçao.style.backgroundColor = 'red'
+            secçao.style.color = 'white'
+            imagem.style.backgroundColor = 'red'
+        }
+    </script>
+</body>
+</html>
