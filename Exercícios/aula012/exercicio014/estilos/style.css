@@ -53,10 +53,13 @@ section > #imagem {
     margin: auto;
     border-radius: 100%;
     box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.221);
+    background:  no-repeat fixed;
+    
 }
 
 main > p {
     color: white;
     text-align: center;
     margin: 20px;
+    font-style: italic;
 }
