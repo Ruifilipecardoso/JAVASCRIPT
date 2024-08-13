@@ -6,16 +6,17 @@
     <title>Hora do Dia</title>
     <link rel="stylesheet" href="estilos/style.css">
 </head>
-<body id="fundo">
-    <main >
+<body  onload="carregar()">
+    <main id="fundo">
         <h1>Hora do Dia</h1>
-        <section id="secçao">
-            <div id="horas">...</div>
-            <div id="imagem"></div>
+        <section id="secçao"> 
+            <div id="msg">...</div>
+            <div id="foto"><img id="imagem" src="" alt=""></div>
         </section>
         <p> &copy; CursoemVideo</p>
     </main>
-    <script>
+    <script src="script.js"></script>
+    <!--<script>
         var agora = new Date()
         var hora = agora.getHours()
         var fundo = window.document.getElementById('fundo')
@@ -56,6 +57,6 @@
             secçao.style.color = 'white'
             imagem.style.backgroundColor = 'red'
         }
-    </script>
+    </script>-->
 </body>
 </html>
