@@ -28,11 +28,11 @@ h1 {
     margin: 0px 0px 20px 0px;
 }
 
-section {
+section#secçao {
     background-color: rgb(66, 64, 148);
     min-width: 400px;
     width: 60vw;
-    height: 60vh;
+    height: 52vh;
     margin: auto;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.403);
     border-radius: 10px;
@@ -44,6 +44,7 @@ section > #msg {
     text-align: center;
     padding: 10px;
     margin: 10px;
+    color: white;
 }
 
 section > #foto {
@@ -54,7 +55,8 @@ section > #foto {
     border-radius: 100%;
     box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.221);
     background:  no-repeat center center;
-    
+    padding: 8px;
+    text-align: center;
 }
 
 main > p {

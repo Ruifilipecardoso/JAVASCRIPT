@@ -7,63 +7,33 @@
     <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
-    <main>
+    <header>
         <h1>Verificador de Idade</h1>
-        <section>
-            <p id="ano">
-                <label for="idade">Ano de Nascimento: </label>
-                <input type="number" name="idade" id="idade" required  step="1" value="2024">
+    </header>
+    <section>
+        <div>
+            <p>
+                <label for="txtano">Ano de nascimento:</label>
+                <input type="number" name="txtano" id="txtano" min="0" required>
             </p>
-
-            <p id="sexo" >
+            <p>
                 Sexo:
-                <input type="radio" name="sexo" id="M" required ><label for="M" onclick="macho()"> Mascolino</label>
-                <input type="radio" name="sexo" id="F" required onclick="femea()"><label for="F"> Femenino</label>
+                <label for="masc">Masculino</label>
+                <input type="radio" name="radsex" id="masc">
+                <label for="femi">Feminino</label>
+                <input type="radio" name="radsex" id="femi" checked>
             </p>
-
-            <p id="botao">
-                <input id="verificar" type="submit" value="Verificar" onclick="frase()">
+            <p>
+                <input id="button" type="button" value="verificar" onclick="verificar()">
             </p>
-
-            <p id="detector">Preencha os dados acima para ver o resultado!</p>
-
-            <div id="imagem"></div>
-
-        </section>
-        <p>©️ CursoemVideo</p>
-    </main>
-
-    <script>
-        var sexo = 1
-
-        function macho() {
-            var sexo = 'Homem'
-        }
-
-        function femea() {
-            var sexo = 'Mulher'
-        }
-        
-        //Idade
-        var date = new Date()
-        var atual = date.getFullYear()
-        //var atualnum = Number(atual.value)
-        var ano = window.document.getElementById('idade')
-        var anonum = Number(ano.value)
-        var idade = atual - anonum
-            
-        
-
-        var botao = window.document.getElementById('botao')
-        
-        var detector = window.document.getElementById('detector')
-
-        function frase() {
-            detector.innerHTML = `${sexo} com ${anonum} anos!`
-        }
-
-        //botao.addEventListener('click', macho)
-
-    </script>
+        </div>
+        <div id="res">
+            <p>Preencha os dados acima para ver o resultado!</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

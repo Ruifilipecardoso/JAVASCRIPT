@@ -23,7 +23,6 @@ function carregar() {
         img.style.backgroundImage = 'url(imagens/Noite.png)'
         fundo.style.backgroundColor = '#17202A'
         fundo2.style.backgroundColor = '#17202A'
-        msg.style.color = 'white'
     }
 
 }
