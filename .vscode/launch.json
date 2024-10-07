@@ -5,7 +5,7 @@
             "type": "node",
             "name": "Executar Arquivo Atual",
             "request": "launch",
-            "program": "${workspaceFolder}\\Exercícios\\aula012\\ex013.js"
+            "program": "${workspaceFolder}\\Exercícios\\aula014\\exercicio016\\script.js"
         }
     ]
 }
