@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
-    <title>Modelo</title>
+    <title>Tabuada</title>
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1 id="titulo">Tabuada</h1>
     </header>
     <section>
         <div>
-            
+            <label for="numero">Número:</label>
+            <input type="number" name="numero" id="numero" value="1">
+            <input type="button" value="Gerar Tabuada" id="button">
         </div>
         <div>
-            
+            <select name="tabuada" size="10" id="tabuada">
+                <option>Digite um número acima</option></select>
         </div>
     </section>
     <footer>
